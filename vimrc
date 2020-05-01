@@ -8,12 +8,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'crusoexia/vim-monokai'
-Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'leafgarland/typescript-vim'
+
+" Color Schemes
+
+Plug 'nerdypepper/agila.vim'
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
@@ -33,7 +36,10 @@ set rtp+=/usr/local/opt/fzf
 
 syntax on
 set number
-set termguicolors
-highlight Normal ctermbg=None
-highlight LineNr ctermfg=DarkGrey
-colorscheme molokai_dark
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+let ayucolor="dark"
+colorscheme ayu
