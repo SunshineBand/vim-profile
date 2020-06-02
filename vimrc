@@ -15,6 +15,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'andreshazard/vim-freemarker'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Color Schemes
 
