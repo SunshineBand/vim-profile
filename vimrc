@@ -49,3 +49,4 @@ endif
 
 let ayucolor="dark"
 colorscheme ayu
+set viminfo+-n~/.config/vim/viminfo
