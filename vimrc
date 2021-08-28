@@ -6,6 +6,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Languages
 
@@ -39,7 +41,7 @@ let g:NERDTreeWinSize=40
 let g:airline#extensions#vimtex#enabled=1
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 set rtp+=/usr/local/opt/fzf
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
@@ -55,3 +57,6 @@ endif
 
 let ayucolor="dark"
 colorscheme ayu
+
+nnoremap <C-f> :Files<CR>
+nnoremap <C-p> :NERDTree<CR>
