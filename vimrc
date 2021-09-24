@@ -17,6 +17,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'lervag/vimtex'
+Plug 'OmniSharp/omnisharp-vim'
 
 " Color Schemes and Visuals
 
