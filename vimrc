@@ -18,6 +18,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'lervag/vimtex'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Color Schemes and Visuals
 
