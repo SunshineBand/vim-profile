@@ -44,7 +44,7 @@ let g:airline#extensions#vimtex#enabled=1
 
 autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-set rtp+=/usr/local/opt/fzf
+set rtp+=/usr/local/bin/fzf
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
