@@ -19,6 +19,9 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'lervag/vimtex'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-endwise'
+Plug 'vim-ruby/vim-ruby'
 
 " Color Schemes and Visuals
 
