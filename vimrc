@@ -51,6 +51,7 @@ set rtp+=/usr/local/bin/fzf
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
+let mapleader = " "
 
 syntax on
 set number
@@ -65,3 +66,6 @@ colorscheme ayu
 
 nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :NERDTree<CR>
+nmap <leader>gn :diffget //3<CR>
+nmap <leader>gt :diffget //2<CR>
+nmap <leader>gs :G<CR>
