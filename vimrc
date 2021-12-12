@@ -23,6 +23,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
+Plug 'slim-template/vim-slim'
 
 " Color Schemes and Visuals
 
@@ -52,7 +53,6 @@ set rtp+=/usr/local/bin/fzf
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
-let mapleader = " "
 
 syntax on
 set number
@@ -64,6 +64,13 @@ endif
 
 let ayucolor="dark"
 colorscheme ayu
+
+" query, ag options, fzf#run options, fullscreen
+autocmd VimEnter *
+\ command! -bang -nargs=* Ag
+\ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
+
+let mapleader = " "
 
 nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :NERDTree<CR>
