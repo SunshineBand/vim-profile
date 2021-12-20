@@ -24,6 +24,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
+Plug 'ap/vim-css-color'
 
 " Color Schemes and Visuals
 
