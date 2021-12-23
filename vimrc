@@ -74,7 +74,7 @@ autocmd VimEnter *
 let mapleader = " "
 
 nnoremap <C-f> :Files<CR>
-nnoremap <C-p> :NERDTree<CR>
+nnoremap <C-p> :NERDTreeFind<CR>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
