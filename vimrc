@@ -34,6 +34,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
@@ -64,7 +65,7 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme ayu
+colorscheme gruvbox
 
 " query, ag options, fzf#run options, fullscreen
 autocmd VimEnter *
