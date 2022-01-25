@@ -3,6 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -77,6 +79,7 @@ let mapleader = " "
 
 nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :NERDTreeFind<CR>
+nnoremap <leader>yf :let @* = expand("%")<CR>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
