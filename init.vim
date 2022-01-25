@@ -80,6 +80,7 @@ let mapleader = " "
 nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :NERDTreeFind<CR>
 nnoremap <leader>yf :let @* = expand("%")<CR>
+nnoremap <C-l> :GitGutterAll<CR><C-l>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
