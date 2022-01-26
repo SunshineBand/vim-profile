@@ -1,5 +1,3 @@
-:lua require('plugins')
-
 filetype plugin indent on
 set expandtab
 set tabstop=2
@@ -34,6 +32,9 @@ colorscheme gruvbox
 autocmd VimEnter *
 \ command! -bang -nargs=* Ag
 \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
+
+lua require('plugins')
+lua require('language-server')
 
 let mapleader = " "
 

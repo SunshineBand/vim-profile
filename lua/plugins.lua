@@ -12,21 +12,29 @@ return require('packer').startup(function()
   use { 'junegunn/fzf', run = ":lua vim.fn['fzf#install']" }
   use 'junegunn/fzf.vim'
 
-  -- Languages
+  -- Lsp
+
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
+
+  -- Syntax
 
   use 'andreshazard/vim-freemarker'
   use 'leafgarland/typescript-vim'
   use 'rust-lang/rust.vim'
   use 'maxmellon/vim-jsx-pretty'
-  use 'xuhdev/vim-latex-live-preview'
   use 'lervag/vimtex'
   use 'OmniSharp/omnisharp-vim'
   use { 'fatih/vim-go', run = ':GoUpdateBinaries' }
-  use 'tpope/vim-rails'
-  use 'tpope/vim-endwise'
   use 'vim-ruby/vim-ruby'
   use 'slim-template/vim-slim'
-  use 'ap/vim-css-color'
+  use 'kchmck/vim-coffee-script'
+
+  -- Language Specific
+
+  use 'tpope/vim-rails'
+  use 'xuhdev/vim-latex-live-preview'
+  use 'tpope/vim-endwise'
 
   -- Color Schemes and Visuals
 
@@ -36,6 +44,6 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ryanoasis/vim-devicons'
-  use 'kchmck/vim-coffee-script'
+  use 'ap/vim-css-color'
 
 end)
