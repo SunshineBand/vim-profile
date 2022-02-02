@@ -38,6 +38,7 @@ return require('packer').startup(function()
 
   -- Color Schemes and Visuals
 
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
   use 'morhetz/gruvbox'
   use 'ayu-theme/ayu-vim'

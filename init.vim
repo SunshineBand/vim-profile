@@ -26,7 +26,7 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme gruvbox
+colorscheme catppuccin
 
 " query, ag options, fzf#run options, fullscreen
 autocmd VimEnter *
