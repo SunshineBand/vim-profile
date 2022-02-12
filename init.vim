@@ -20,6 +20,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
 syntax on
 set number
 set relativenumber
+set inccommand=split
 
 if (has("termguicolors"))
   set termguicolors
