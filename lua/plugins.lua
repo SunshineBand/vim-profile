@@ -35,6 +35,7 @@ return require('packer').startup(function()
   use 'tpope/vim-rails'
   use 'xuhdev/vim-latex-live-preview'
   use 'tpope/vim-endwise'
+  use 'thoughtbot/vim-rspec'
 
   -- Color Schemes and Visuals
 

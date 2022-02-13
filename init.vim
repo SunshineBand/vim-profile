@@ -27,7 +27,7 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme catppuccin
+colorscheme gruvbox
 
 " query, ag options, fzf#run options, fullscreen
 autocmd VimEnter *
@@ -39,6 +39,10 @@ lua require('language-server')
 
 let mapleader = " "
 
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :NERDTreeFind<CR>
 nnoremap <leader>yf :let @* = expand("%")<CR>
