@@ -39,6 +39,15 @@ lua require('language-server')
 
 let mapleader = " "
 
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
+
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
