@@ -11,6 +11,7 @@ return require('packer').startup(function()
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use { 'junegunn/fzf', run = ":lua vim.fn['fzf#install']" }
   use 'junegunn/fzf.vim'
+  use 'vim-test/vim-test'
 
   -- Lsp
 
@@ -35,7 +36,6 @@ return require('packer').startup(function()
   use 'tpope/vim-rails'
   use 'xuhdev/vim-latex-live-preview'
   use 'tpope/vim-endwise'
-  use 'thoughtbot/vim-rspec'
 
   -- Color Schemes and Visuals
 
