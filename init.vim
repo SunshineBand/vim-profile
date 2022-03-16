@@ -68,3 +68,6 @@ nnoremap <C-l> :GitGutterAll<CR><C-l>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
+nmap <leader>co :copen<CR>
+nmap <leader>n :cnext<CR>
+nmap <leader>p :cprev<CR>
