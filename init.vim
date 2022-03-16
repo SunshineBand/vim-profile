@@ -8,6 +8,7 @@ set list
 set lcs+=space:·
 let g:NERDTreeWinSize=40
 let g:airline#extensions#vimtex#enabled=1
+let test#strategy = "dispatch"
 
 autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -51,6 +52,8 @@ endfunction
 " set tags=./tags,tags,~/prj/work/monolith/Shippit/tags
 " set tags=./tags,tags;$HOME
 set tags=/home/earlgrey/prj/work/monolith/Shippit/tags
+
+map Y y$
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>

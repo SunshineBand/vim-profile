@@ -5,6 +5,7 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
+  use 'tpope/vim-dispatch'
   use 'airblade/vim-gitgutter'
   use 'scrooloose/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
