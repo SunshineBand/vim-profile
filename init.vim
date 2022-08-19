@@ -49,10 +49,6 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
-" set tags=./tags,tags,~/prj/work/monolith/Shippit/tags
-" set tags=./tags,tags;$HOME
-set tags=/home/earlgrey/prj/work/monolith/Shippit/tags
-
 map Y y$
 
 nmap <silent> <leader>t :TestNearest<CR>
