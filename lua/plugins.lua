@@ -43,6 +43,7 @@ return require('packer').startup(function()
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
   use 'morhetz/gruvbox'
+  use 'vigoux/oak'
   use 'ayu-theme/ayu-vim'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
