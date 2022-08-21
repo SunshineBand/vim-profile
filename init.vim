@@ -36,7 +36,9 @@ autocmd VimEnter *
 \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
 lua require('plugins')
-" lua require('language-server')
+lua require('mason').setup()
+lua require("mason-lspconfig").setup()
+lua require('language-server')
 
 let mapleader = " "
 
