@@ -39,6 +39,7 @@ lua require('plugins')
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
 lua require('language-server')
+lua require('debugging')
 
 let mapleader = " "
 
@@ -52,6 +53,9 @@ function! QuickfixFilenames()
 endfunction
 
 map Y y$
+noremap <leader>y "*y
+noremap <leader>Y "*y$
+noremap <leader>p "*p
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -67,5 +71,5 @@ nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>co :copen<CR>
-nmap <leader>n :cnext<CR>
-nmap <leader>p :cprev<CR>
+nmap <leader>cn :cnext<CR>
+nmap <leader>cp :cprev<CR>

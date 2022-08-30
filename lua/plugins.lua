@@ -2,18 +2,22 @@ return require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
   use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
-  use 'tpope/vim-dispatch'
-  use 'airblade/vim-gitgutter'
   use 'scrooloose/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
+  -- Todo: add tpope projectionist
+
+  -- Tools
+
   use { 'junegunn/fzf', run = ":lua vim.fn['fzf#install']" }
   use 'junegunn/fzf.vim'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+  use 'mfussenegger/nvim-dap'
   use 'vim-test/vim-test'
-  -- Todo: add tpope projectionist
+  use 'tpope/vim-dispatch'
 
   -- Lsp
 
