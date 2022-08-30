@@ -70,6 +70,7 @@ nnoremap <C-l> :GitGutterAll<CR><C-l>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
+nnoremap <leader>ga :A<CR>
 nmap <leader>co :copen<CR>
 nmap <leader>cn :cnext<CR>
 nmap <leader>cp :cprev<CR>

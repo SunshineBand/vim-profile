@@ -18,6 +18,7 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap'
   use 'vim-test/vim-test'
   use 'tpope/vim-dispatch'
+  use 'tpope/vim-projectionist'
 
   -- Lsp
 
