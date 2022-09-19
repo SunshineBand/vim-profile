@@ -2,17 +2,23 @@ return require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
   use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-fugitive'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
-  use 'tpope/vim-dispatch'
-  use 'airblade/vim-gitgutter'
   use 'scrooloose/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
+  -- Todo: add tpope projectionist
+
+  -- Tools
+
   use { 'junegunn/fzf', run = ":lua vim.fn['fzf#install']" }
   use 'junegunn/fzf.vim'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+  use 'mfussenegger/nvim-dap'
   use 'vim-test/vim-test'
+  use 'tpope/vim-dispatch'
+  use 'tpope/vim-projectionist'
 
   -- Lsp
 
@@ -22,7 +28,10 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
 
   -- Syntax
-
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
   use 'andreshazard/vim-freemarker'
   use 'leafgarland/typescript-vim'
   use 'rust-lang/rust.vim'
@@ -44,9 +53,9 @@ return require('packer').startup(function()
 
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
-  use 'morhetz/gruvbox'
+  use 'ellisonleao/gruvbox.nvim'
   use 'vigoux/oak'
-  use 'ayu-theme/ayu-vim'
+  use 'Shatur/neovim-ayu'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
   use 'ryanoasis/vim-devicons'
