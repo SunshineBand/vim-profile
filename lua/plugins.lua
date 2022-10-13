@@ -7,12 +7,13 @@ return require('packer').startup(function()
   use 'scrooloose/nerdtree'
   use 'Xuyuanp/nerdtree-git-plugin'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
-  -- Todo: add tpope projectionist
 
   -- Tools
 
-  use { 'junegunn/fzf', run = ":lua vim.fn['fzf#install']" }
-  use 'junegunn/fzf.vim'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
   use 'mfussenegger/nvim-dap'
