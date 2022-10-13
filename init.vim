@@ -33,6 +33,7 @@ lua require("mason-lspconfig").setup()
 lua require('language-server')
 lua require('debugging')
 lua require('treesitter-config')
+lua require('telescope-config')
 
 let mapleader = " "
 
