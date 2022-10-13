@@ -20,6 +20,7 @@ return require('packer').startup(function()
   use 'vim-test/vim-test'
   use 'tpope/vim-dispatch'
   use 'tpope/vim-projectionist'
+  use 'renerocksai/telekasten.nvim'
 
   -- Lsp
 

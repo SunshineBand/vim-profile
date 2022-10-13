@@ -34,6 +34,7 @@ lua require('language-server')
 lua require('debugging')
 lua require('treesitter-config')
 lua require('telescope-config')
+lua require('brain-config')
 
 let mapleader = " "
 
@@ -52,6 +53,8 @@ nmap <silent> <leader>v :TestVisit<CR>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+nnoremap <leader>z :lua require('telekasten').panel()<CR>
 
 nnoremap <C-p> :NERDTreeFind<CR>
 nnoremap <C-l> :GitGutterAll<CR><C-l>
