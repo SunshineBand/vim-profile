@@ -15,7 +15,7 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
+  use 'lewis6991/gitsigns.nvim'
   use 'mfussenegger/nvim-dap'
   use 'vim-test/vim-test'
   use 'tpope/vim-dispatch'
@@ -56,6 +56,7 @@ return require('packer').startup(function()
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'sainnhe/gruvbox-material'
   use 'vigoux/oak'
   use 'Shatur/neovim-ayu'
   use 'vim-airline/vim-airline'

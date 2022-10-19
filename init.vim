@@ -9,6 +9,7 @@ set lcs+=space:·
 let g:NERDTreeWinSize=40
 let g:airline#extensions#vimtex#enabled=1
 let test#strategy = "dispatch"
+let g:gruvbox_material_foreground='mix'
 
 autocmd StdinReadPre * let s:std_in=1
 
@@ -25,8 +26,9 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme gruvbox
+colorscheme gruvbox-material
 
+lua require('gitsigns-config')
 lua require('plugins')
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
@@ -50,6 +52,7 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>v :TestVisit<CR>
 
+nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
