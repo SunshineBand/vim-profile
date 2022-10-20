@@ -1,12 +1,6 @@
 return require('packer').startup(function()
 
   use 'wbthomason/packer.nvim'
-  use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
-  use 'scrooloose/nerdtree'
-  use 'Xuyuanp/nerdtree-git-plugin'
-  use 'tiagofumo/vim-nerdtree-syntax-highlight'
 
   -- Tools
 
@@ -21,6 +15,11 @@ return require('packer').startup(function()
   use 'tpope/vim-dispatch'
   use 'tpope/vim-projectionist'
   use 'renerocksai/telekasten.nvim'
+  use 'jiangmiao/auto-pairs'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-commentary'
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Lsp
 
@@ -60,7 +59,6 @@ return require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-  use 'ryanoasis/vim-devicons'
   use 'ap/vim-css-color'
 
 end)

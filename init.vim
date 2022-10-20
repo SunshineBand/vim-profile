@@ -1,3 +1,6 @@
+lua vim.g.loaded_netrw = 1
+lua vim.g.loaded_netrwPlugin = 1
+
 filetype plugin indent on
 set expandtab
 set tabstop=2
@@ -6,7 +9,6 @@ set shiftwidth=2
 let g:airline_powerline_fonts=1
 set list
 set lcs+=space:·
-let g:NERDTreeWinSize=40
 let g:airline#extensions#vimtex#enabled=1
 let test#strategy = "dispatch"
 
@@ -36,6 +38,7 @@ lua require('debugging')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('brain-config')
+lua t = require('nvim-tree-config')
 
 let mapleader = " "
 
@@ -55,11 +58,10 @@ nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>e <cmd>lua t.toggle_replace()<cr>
 
 nnoremap <leader>z :lua require('telekasten').panel()<CR>
 
-nnoremap <C-p> :NERDTreeFind<CR>
-nnoremap <C-l> :GitGutterAll<CR><C-l>
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
