@@ -9,7 +9,6 @@ set lcs+=space:·
 let g:NERDTreeWinSize=40
 let g:airline#extensions#vimtex#enabled=1
 let test#strategy = "dispatch"
-let g:gruvbox_material_foreground='mix'
 
 autocmd StdinReadPre * let s:std_in=1
 
@@ -26,7 +25,7 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme gruvbox-material
+colorscheme gruvbox
 
 lua require('gitsigns-config')
 lua require('plugins')

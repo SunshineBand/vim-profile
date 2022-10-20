@@ -56,7 +56,6 @@ return require('packer').startup(function()
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
   use 'ellisonleao/gruvbox.nvim'
-  use 'sainnhe/gruvbox-material'
   use 'vigoux/oak'
   use 'Shatur/neovim-ayu'
   use 'vim-airline/vim-airline'
