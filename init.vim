@@ -57,10 +57,12 @@ nmap <silent> <leader>v :TestVisit<CR>
 nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>? <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>rw <cmd>lua require('telescope.builtin').grep_string()<cr>
+nnoremap <leader>t <cmd>lua require('telescope.builtin').builtin()<cr>
 nnoremap <leader>e <cmd>lua t.toggle_replace()<cr>
 
-nnoremap <leader>z :lua require('telekasten').panel()<CR>
+nnoremap <leader>z <cmd>lua require('telekasten').panel()<cr>
 
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
