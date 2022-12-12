@@ -7,6 +7,11 @@ require("nvim-tree").setup({
       },
     },
   },
+  actions = {
+    change_dir = {
+      enable = false,
+    }
+  }
 })
 
 local toggle = {}
