@@ -27,6 +27,7 @@ return require('packer').startup(function()
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
+  use 'jose-elias-alvarez/null-ls.nvim'
 
   -- Syntax
   use {

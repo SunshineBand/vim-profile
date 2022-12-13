@@ -38,6 +38,7 @@ lua require('debugging')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('brain-config')
+lua require('null-ls-config')
 lua t = require('nvim-tree-config')
 
 let mapleader = " "
