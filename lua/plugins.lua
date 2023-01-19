@@ -8,6 +8,10 @@ return require('packer').startup(function()
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+    'ThePrimeagen/harpoon',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use 'tpope/vim-fugitive'
   use 'lewis6991/gitsigns.nvim'
   use 'mfussenegger/nvim-dap'

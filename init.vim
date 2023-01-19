@@ -64,6 +64,13 @@ nnoremap <leader>rw <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>t <cmd>lua require('telescope.builtin').builtin()<cr>
 nnoremap <leader>e <cmd>lua t.toggle_replace()<cr>
 
+nnoremap <leader>mm <cmd>lua require("harpoon.mark").add_file()<cr>
+nnoremap <leader>mo <cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>
+nnoremap <leader>ma <cmd>lua require("harpoon.ui").nav_file(1)<cr>
+nnoremap <leader>mb <cmd>lua require("harpoon.ui").nav_file(2)<cr>
+nnoremap <leader>mc <cmd>lua require("harpoon.ui").nav_file(3)<cr>
+nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
+
 nnoremap <leader>z <cmd>lua require('telekasten').panel()<cr>
 
 nmap <leader>gn :diffget //3<CR>
