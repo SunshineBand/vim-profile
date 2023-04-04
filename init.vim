@@ -40,6 +40,7 @@ lua require('treesitter-config')
 lua require('telescope-config')
 lua require('brain-config')
 lua require('null-ls-config')
+lua require('zk-config')
 lua t = require('nvim-tree-config')
 
 let mapleader = " "
@@ -73,7 +74,10 @@ nnoremap <leader>mb <cmd>lua require("harpoon.ui").nav_file(2)<cr>
 nnoremap <leader>mc <cmd>lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
 
-nnoremap <leader>z <cmd>lua require('telekasten').panel()<cr>
+nnoremap <leader>zf <cmd>lua require('zk.commands').get('ZkNotes')()<cr>
+nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ dir = 'daily' })<cr>
+nnoremap <leader>zn <cmd>lua require('zk.commands').get('ZkNew')()<cr>
+nnoremap <leader>zt <cmd>lua require('zk.commands').get('ZkNew')({ dir = 'daily', date = 'yesterday' })<cr>
 
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>

@@ -24,6 +24,7 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
+  use 'mickael-menu/zk-nvim'
 
   -- Lsp
 
