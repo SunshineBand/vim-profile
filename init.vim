@@ -75,7 +75,7 @@ nnoremap <leader>mc <cmd>lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
 
 nnoremap <leader>zf <cmd>lua require('zk.commands').get('ZkNotes')()<cr>
-nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ dir = 'daily' })<cr>
+nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
 nnoremap <leader>zn <cmd>lua require('zk.commands').get('ZkNew')()<cr>
 nnoremap <leader>zt <cmd>lua require('zk.commands').get('ZkNew')({ dir = 'daily', date = 'yesterday' })<cr>
 
