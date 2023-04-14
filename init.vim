@@ -1,6 +1,7 @@
 lua vim.g.loaded_netrw = 1
 lua vim.g.loaded_netrwPlugin = 1
 
+filetype plugin on
 filetype plugin indent on
 set expandtab
 set tabstop=2
@@ -74,10 +75,24 @@ nnoremap <leader>mb <cmd>lua require("harpoon.ui").nav_file(2)<cr>
 nnoremap <leader>mc <cmd>lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
 
-nnoremap <leader>zf <cmd>lua require('zk.commands').get('ZkNotes')()<cr>
 nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
-nnoremap <leader>zn <cmd>lua require('zk.commands').get('ZkNew')()<cr>
-nnoremap <leader>zt <cmd>lua require('zk.commands').get('ZkNew')({ dir = 'daily', date = 'yesterday' })<cr>
+
+lua << EOF
+local opts = { noremap=true, silent=false }
+
+-- Create a new note after asking for its title.
+vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+
+-- Open notes.
+vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+-- Open notes associated with the selected tags.
+vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+
+-- Search for the notes matching a given query.
+vim.api.nvim_set_keymap("n", "<leader>zg", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+-- Search for the notes matching the current visual selection.
+vim.api.nvim_set_keymap("v", "<leader>zg", ":'<,'>ZkMatch<CR>", opts)
+EOF
 
 nmap <leader>gn :diffget //3<CR>
 nmap <leader>gt :diffget //2<CR>
