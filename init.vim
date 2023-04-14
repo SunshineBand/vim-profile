@@ -47,10 +47,10 @@ lua t = require('nvim-tree-config')
 let mapleader = " "
 
 map Y y$
-noremap <leader>y "*y
-noremap <leader>Y "*y$
-noremap <leader>p "*p
-nnoremap <leader>yf :let @* = expand("%")<CR>
+noremap <leader>y "+y
+noremap <leader>Y "+y$
+noremap <leader>p "+p
+nnoremap <leader>yf :let @+ = expand("%")<CR>
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
