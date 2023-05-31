@@ -50,7 +50,7 @@ map Y y$
 noremap <leader>y "+y
 noremap <leader>Y "+y$
 noremap <leader>p "+p
-nnoremap <leader>yf :let @+ = expand("%")<CR>
+nnoremap <leader>yf :let @+ = expand("%:.")<CR>
 
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
