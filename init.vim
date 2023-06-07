@@ -77,6 +77,25 @@ nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
 
 nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
 
+nnoremap <leader>zz :call ToggleZkHome()<cr>
+
+function ToggleZkHome()
+  if empty($ZK_WORK_NOTEBOOK_DIR) || empty($ZK_PERSONAL_NOTEBOOK_DIR)
+    echo 'Need to define the zk repo directories'
+    return
+  endif
+
+  if $ZK_NOTEBOOK_DIR == $ZK_PERSONAL_NOTEBOOK_DIR
+    let $ZK_NOTEBOOK_DIR = $ZK_WORK_NOTEBOOK_DIR
+    echo 'work'
+  elseif $ZK_NOTEBOOK_DIR == $ZK_WORK_NOTEBOOK_DIR
+    let $ZK_NOTEBOOK_DIR = $ZK_PERSONAL_NOTEBOOK_DIR
+    echo 'brain'
+  else
+    echo 'ERR: Something weird happened'
+  endif
+endfunction
+
 lua << EOF
 local opts = { noremap=true, silent=false }
 
