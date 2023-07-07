@@ -72,6 +72,7 @@ return require('packer').startup(function()
   use 'Shatur/neovim-ayu'
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use 'folke/tokyonight.nvim'
   use 'ap/vim-css-color'
 
 end)

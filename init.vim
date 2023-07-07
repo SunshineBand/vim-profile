@@ -28,7 +28,6 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
-colorscheme gruvbox
 
 lua require('gitsigns-config')
 lua require('plugins')
@@ -42,8 +41,10 @@ lua require('telescope-config')
 " lua require('brain-config')
 lua require('null-ls-config')
 lua require('zk-config')
+lua require('tokyonight-config')
 lua t = require('nvim-tree-config')
 
+colorscheme tokyonight
 let mapleader = " "
 
 map Y y$
