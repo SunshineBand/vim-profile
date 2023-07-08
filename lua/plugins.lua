@@ -14,6 +14,7 @@ return require('packer').startup(function()
       require"octo".setup()
     end
   }
+  use 'tyru/open-browser.vim'
   use("petertriho/nvim-scrollbar")
   use({
       "iamcco/markdown-preview.nvim",

@@ -1,6 +1,9 @@
 lua vim.g.loaded_netrw = 1
 lua vim.g.loaded_netrwPlugin = 1
 
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 filetype plugin on
 filetype plugin indent on
 set expandtab
