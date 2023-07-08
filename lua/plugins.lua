@@ -15,10 +15,10 @@ return require('packer').startup(function()
     end
   }
   use 'tyru/open-browser.vim'
-  use("petertriho/nvim-scrollbar")
+  use('petertriho/nvim-scrollbar')
   use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
+      'iamcco/markdown-preview.nvim',
+      run = function() vim.fn['mkdp#util#install']() end,
   })
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.x',
@@ -42,6 +42,7 @@ return require('packer').startup(function()
   use 'tpope/vim-projectionist'
   use 'renerocksai/telekasten.nvim'
   use 'jiangmiao/auto-pairs'
+  use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
   use 'nvim-tree/nvim-tree.lua'
