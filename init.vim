@@ -81,6 +81,7 @@ nnoremap <leader>mc <cmd>lua require("harpoon.ui").nav_file(3)<cr>
 nnoremap <leader>md <cmd>lua require("harpoon.ui").nav_file(4)<cr>
 
 nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
+nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
 nnoremap <leader>zz :call ToggleZkHome()<cr>
 
