@@ -49,6 +49,10 @@ return require('packer').startup(function()
   use 'mickael-menu/zk-nvim'
   use 'm4xshen/hardtime.nvim'
   use 'rcarriga/nvim-notify'
+  use {
+    'stevearc/oil.nvim',
+    config = function() require('oil').setup() end
+  }
 
   -- Lsp
 

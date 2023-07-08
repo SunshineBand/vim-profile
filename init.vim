@@ -49,7 +49,7 @@ lua require('null-ls-config')
 lua require('zk-config')
 lua require('tokyonight-config')
 lua require('octo-nvim-config')
-lua t = require('nvim-tree-config')
+lua require('oil-nvim-config')
 
 colorscheme tokyonight
 let mapleader = " "
@@ -74,7 +74,7 @@ nnoremap <leader>hg <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>rw <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>rq <cmd>lua require('telescope.builtin').quickfix()<cr>
 nnoremap <leader>t <cmd>lua require('telescope.builtin').builtin()<cr>
-nnoremap <leader>e <cmd>lua t.toggle_replace()<cr>
+nnoremap <leader>e <cmd>Oil<cr>
 
 nnoremap <leader>mm <cmd>lua require("harpoon.mark").add_file()<cr>
 nnoremap <leader>mo <cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>
