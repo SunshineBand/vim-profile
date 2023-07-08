@@ -4,10 +4,6 @@ return require('packer').startup(function()
 
   -- Tools
   use {
-    'ldelossa/gh.nvim',
-    requires = { { 'ldelossa/litee.nvim' } }
-  }
-  use {
     'pwntester/octo.nvim',
     requires = {
       'nvim-lua/plenary.nvim',
