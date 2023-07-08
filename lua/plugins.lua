@@ -10,10 +10,11 @@ return require('packer').startup(function()
       'nvim-telescope/telescope.nvim',
       'nvim-tree/nvim-web-devicons',
     },
-  config = function ()
-    require"octo".setup()
-  end
-}
+    config = function ()
+      require"octo".setup()
+    end
+  }
+  use("petertriho/nvim-scrollbar")
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
@@ -27,7 +28,13 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'tpope/vim-fugitive'
-  use 'lewis6991/gitsigns.nvim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+      require("scrollbar.handlers.gitsigns").setup()
+    end
+  }
   use 'mfussenegger/nvim-dap'
   use 'vim-test/vim-test'
   use 'tpope/vim-dispatch'

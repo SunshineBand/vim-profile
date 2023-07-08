@@ -29,6 +29,7 @@ endif
 
 let ayucolor="dark"
 
+lua require("nvim-scrollbar-config")
 lua require('gitsigns-config')
 lua require('plugins')
 lua require('mason').setup()
