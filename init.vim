@@ -29,6 +29,9 @@ endif
 
 let ayucolor="dark"
 
+lua vim.notify = require('notify')
+lua require('hardtime-nvim-config')
+lua require('nvim-notify-config')
 lua require("nvim-scrollbar-config")
 lua require('gitsigns-config')
 lua require('plugins')

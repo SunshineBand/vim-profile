@@ -46,6 +46,8 @@ return require('packer').startup(function()
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'mickael-menu/zk-nvim'
+  use 'm4xshen/hardtime.nvim'
+  use 'rcarriga/nvim-notify'
 
   -- Lsp
 
