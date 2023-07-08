@@ -54,6 +54,11 @@ return require('packer').startup(function()
     'stevearc/oil.nvim',
     config = function() require('oil').setup() end
   }
+  use {
+    'akinsho/git-conflict.nvim', tag = "*", config = function()
+      require('git-conflict').setup()
+    end
+  }
 
   -- Lsp
 

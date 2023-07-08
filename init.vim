@@ -31,6 +31,7 @@ if (has("termguicolors"))
 endif
 
 let ayucolor="dark"
+colorscheme tokyonight
 
 lua vim.notify = require('notify')
 lua require('hardtime-nvim-config')
@@ -51,7 +52,7 @@ lua require('tokyonight-config')
 lua require('octo-nvim-config')
 lua require('oil-nvim-config')
 
-colorscheme tokyonight
+lua require('git-conflict-config')
 let mapleader = " "
 
 map Y y$
@@ -122,8 +123,6 @@ vim.api.nvim_set_keymap("n", "<leader>zg", "<Cmd>ZkNotes { sort = { 'modified' }
 vim.api.nvim_set_keymap("v", "<leader>zg", ":'<,'>ZkMatch<CR>", opts)
 EOF
 
-nmap <leader>gn :diffget //3<CR>
-nmap <leader>gt :diffget //2<CR>
 nmap <leader>gs :G<CR>
 nnoremap <leader>ga :A<CR>
 nmap <leader>co :copen<CR>
