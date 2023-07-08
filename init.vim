@@ -43,6 +43,7 @@ lua require('gh-nvim-config')
 lua require('null-ls-config')
 lua require('zk-config')
 lua require('tokyonight-config')
+lua require('octo-nvim-config')
 lua t = require('nvim-tree-config')
 
 colorscheme tokyonight

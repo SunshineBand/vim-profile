@@ -7,6 +7,17 @@ return require('packer').startup(function()
     'ldelossa/gh.nvim',
     requires = { { 'ldelossa/litee.nvim' } }
   }
+  use {
+    'pwntester/octo.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'nvim-telescope/telescope.nvim',
+      'nvim-tree/nvim-web-devicons',
+    },
+  config = function ()
+    require"octo".setup()
+  end
+}
   use({
       "iamcco/markdown-preview.nvim",
       run = function() vim.fn["mkdp#util#install"]() end,
