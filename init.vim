@@ -10,10 +10,8 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-let g:airline_powerline_fonts=1
 set list
 set lcs+=space:·
-let g:airline#extensions#vimtex#enabled=1
 let test#strategy = "dispatch"
 
 autocmd StdinReadPre * let s:std_in=1
@@ -33,12 +31,13 @@ endif
 let ayucolor="dark"
 colorscheme tokyonight
 
+lua require('plugins')
 lua vim.notify = require('notify')
 lua require('hardtime-nvim-config')
 lua require('nvim-notify-config')
 lua require("nvim-scrollbar-config")
 lua require('gitsigns-config')
-lua require('plugins')
+lua require('lualine-config')
 lua require('mason').setup()
 lua require("mason-lspconfig").setup()
 lua require('nvim-cmp-config')

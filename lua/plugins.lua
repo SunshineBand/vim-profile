@@ -101,8 +101,10 @@ return require('packer').startup(function()
   use 'ellisonleao/gruvbox.nvim'
   use 'vigoux/oak'
   use 'Shatur/neovim-ayu'
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
   use 'folke/tokyonight.nvim'
   use 'ap/vim-css-color'
 
