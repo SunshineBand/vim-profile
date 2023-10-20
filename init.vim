@@ -108,6 +108,9 @@ endfunction
 lua << EOF
 local opts = { noremap=true, silent=false }
 
+vim.keymap.set("n", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
+vim.keymap.set("i", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
+
 -- Create a new note after asking for its title.
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
 

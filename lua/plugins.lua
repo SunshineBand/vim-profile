@@ -96,6 +96,8 @@ return require('packer').startup(function()
 
   -- Color Schemes and Visuals
 
+  use 'adelarsq/vim-devicons-emoji'
+  use 'nvim-telescope/telescope-symbols.nvim'
   use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'nerdypepper/agila.vim'
   use 'ellisonleao/gruvbox.nvim'
