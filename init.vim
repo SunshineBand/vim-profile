@@ -13,13 +13,9 @@ set number
 set relativenumber
 set inccommand=split
 
-syntax on
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
 if (has("termguicolors"))
   set termguicolors
 endif
-let ayucolor="dark"
 colorscheme tokyonight
 
 filetype plugin on
@@ -41,7 +37,6 @@ lua require('null-ls-config')
 lua require('zk-config')
 lua require('tokyonight-config')
 lua require('oil-nvim-config')
-
 lua require('git-conflict-config')
 let mapleader = " "
 
@@ -94,8 +89,7 @@ endfunction
 lua << EOF
 local opts = { noremap=true, silent=false }
 
--- vim.keymap.set("n", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
--- vim.api.nvim_set_keymap("i", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
+vim.keymap.set("n", "<leader>i", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
 
 -- Create a new note after asking for its title.
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
