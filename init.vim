@@ -1,35 +1,29 @@
+autocmd StdinReadPre * let s:std_in=1
+
 lua vim.g.loaded_netrw = 1
 lua vim.g.loaded_netrwPlugin = 1
 
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-
-filetype plugin on
-filetype plugin indent on
 set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set list
 set lcs+=space:·
-
-autocmd StdinReadPre * let s:std_in=1
-
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
-
-syntax on
 set number
 set relativenumber
 set inccommand=split
 
+syntax on
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum]"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
 if (has("termguicolors"))
   set termguicolors
 endif
-
 let ayucolor="dark"
 colorscheme tokyonight
 
+filetype plugin on
+filetype plugin indent on
 lua require('plugins')
 lua vim.notify = require('notify')
 lua require('nvim-notify-config')
@@ -51,6 +45,7 @@ lua require('oil-nvim-config')
 lua require('git-conflict-config')
 let mapleader = " "
 
+map gx <Plug>(openbrowser-smart-search)
 map Y y$
 noremap <leader>y "+y
 noremap <leader>Y "+y$
@@ -99,8 +94,8 @@ endfunction
 lua << EOF
 local opts = { noremap=true, silent=false }
 
-vim.keymap.set("n", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
-vim.keymap.set("i", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
+-- vim.keymap.set("n", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
+-- vim.api.nvim_set_keymap("i", "<C-i>", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
 
 -- Create a new note after asking for its title.
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
