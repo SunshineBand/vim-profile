@@ -12,7 +12,6 @@ set softtabstop=2
 set shiftwidth=2
 set list
 set lcs+=space:·
-let test#strategy = "dispatch"
 
 autocmd StdinReadPre * let s:std_in=1
 
@@ -33,7 +32,6 @@ colorscheme tokyonight
 
 lua require('plugins')
 lua vim.notify = require('notify')
-lua require('hardtime-nvim-config')
 lua require('nvim-notify-config')
 lua require("nvim-scrollbar-config")
 lua require('gitsigns-config')
@@ -59,12 +57,6 @@ noremap <leader>y "+y
 noremap <leader>Y "+y$
 noremap <leader>p "+p
 nnoremap <leader>yf :let @+ = expand("%:.")<CR>
-
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-" nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>v :TestVisit<CR>
 
 nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
 nnoremap <leader>sl :set list!<CR>

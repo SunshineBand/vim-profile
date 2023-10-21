@@ -37,7 +37,6 @@ return require('packer').startup(function()
     end
   }
   use 'mfussenegger/nvim-dap'
-  use 'vim-test/vim-test'
   use 'tpope/vim-dispatch'
   use 'tpope/vim-projectionist'
   use 'renerocksai/telekasten.nvim'
@@ -48,7 +47,6 @@ return require('packer').startup(function()
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'mickael-menu/zk-nvim'
-  use 'm4xshen/hardtime.nvim'
   use 'rcarriga/nvim-notify'
   use {
     'stevearc/oil.nvim',
