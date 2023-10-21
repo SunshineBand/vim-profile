@@ -67,18 +67,14 @@ nnoremap <leader>md <cmd>lua require('harpoon.ui').nav_file(4)<cr>
 nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
-lua << EOF
-local opts = { noremap=true, silent=false }
-
-vim.keymap.set("n", "<leader>i", "<cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zi", "<Cmd>ZkInsertLink<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zb", "<Cmd>ZkBacklinks<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>zg", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
-vim.api.nvim_set_keymap("v", "<leader>zg", ":'<,'>ZkMatch<CR>", opts)
-EOF
+nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
+nmap <leader>zn <Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>
+nmap <leader>zf <Cmd>ZkNotes { sort = { 'modified' } }<CR>
+nmap <leader>zt <Cmd>ZkTags<CR>
+nmap <leader>zi <Cmd>ZkInsertLink<CR>
+nmap <leader>zb <Cmd>ZkBacklinks<CR>
+nmap <leader>zg <Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>
+vmap <leader>zg :'<,'>ZkMatch<CR>
 
 nmap <leader>gs :G<CR>
 nnoremap <leader>ga :A<CR>
