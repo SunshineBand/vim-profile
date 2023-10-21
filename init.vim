@@ -27,7 +27,7 @@ lua require('nvim-scrollbar-config')
 lua require('gitsigns-config')
 lua require('lualine-config')
 lua require('mason').setup()
-lua require("mason-lspconfig").setup()
+lua require('mason-lspconfig').setup()
 lua require('nvim-cmp-config')
 lua require('language-server')
 lua require('debugging')
@@ -45,10 +45,10 @@ map Y y$
 noremap <leader>y "+y
 noremap <leader>Y "+y$
 noremap <leader>p "+p
-nnoremap <leader>yf :let @+ = expand("%:.")<CR>
+nnoremap <leader>yf :let @+ = expand("%:.")<cr>
 
-nnoremap <leader>vc :e ~/.config/nvim/init.vim<CR>
-nnoremap <leader>sl :set list!<CR>
+nnoremap <leader>vc :e ~/.config/nvim/init.vim<cr>
+nnoremap <leader>sl :set list!<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>hg <cmd>lua require('telescope.builtin').help_tags()<cr>
@@ -68,16 +68,16 @@ nnoremap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { '
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
 nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
-nmap <leader>zn <Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>
-nmap <leader>zf <Cmd>ZkNotes { sort = { 'modified' } }<CR>
-nmap <leader>zt <Cmd>ZkTags<CR>
-nmap <leader>zi <Cmd>ZkInsertLink<CR>
-nmap <leader>zb <Cmd>ZkBacklinks<CR>
-nmap <leader>zg <Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>
-vmap <leader>zg :'<,'>ZkMatch<CR>
+nmap <leader>zn <cmd>ZkNew { title = vim.fn.input('Title: ') }<cr>
+nmap <leader>zf <cmd>ZkNotes { sort = { 'modified' } }<cr>
+nmap <leader>zt <cmd>ZkTags<cr>
+nmap <leader>zi <cmd>ZkInsertLink<cr>
+nmap <leader>zb <cmd>ZkBacklinks<cr>
+nmap <leader>zg <cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<cr>
+vmap <leader>zg :'<,'>ZkMatch<cr>
 
-nmap <leader>gs :G<CR>
-nnoremap <leader>ga :A<CR>
-nmap <leader>co :copen<CR>
-nmap <leader>cn :cnext<CR>
-nmap <leader>cp :cprev<CR>
+nmap <leader>gs :G<cr>
+nnoremap <leader>ga :A<cr>
+nmap <leader>co :copen<cr>
+nmap <leader>cn :cnext<cr>
+nmap <leader>cp :cprev<cr>
