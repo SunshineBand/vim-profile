@@ -51,6 +51,7 @@ nnoremap <leader>vc :e ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sl :set list!<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>rr <cmd>lua require('telescope.builtin').resume()<cr>
 nnoremap <leader>hg <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>rw <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>rq <cmd>lua require('telescope.builtin').quickfix()<cr>
