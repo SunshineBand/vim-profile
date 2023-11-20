@@ -70,7 +70,7 @@ nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
 nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
 nmap <leader>zn <cmd>ZkNew { title = vim.fn.input('Title: ') }<cr>
-nmap <leader>zf <cmd>ZkNotes { sort = { 'modified' } }<cr>
+nmap <leader>zf <cmd>ZkNotes { sort = { 'modified' }, tags = { '-person' } }<cr>
 nmap <leader>zt <cmd>ZkTags<cr>
 nmap <leader>zi <cmd>ZkInsertLink<cr>
 nmap <leader>zb <cmd>ZkBacklinks<cr>
