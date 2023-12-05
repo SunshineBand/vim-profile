@@ -48,6 +48,7 @@ noremap <leader>p "+p
 nnoremap <leader>yf :let @+ = expand("%:.")<cr>
 nnoremap <leader>vc :e ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sl :set list!<cr>
+nnoremap <leader>rl :set relativenumber!<cr>
 tnoremap <leader><Esc> <C-\><C-n>
 
 nnoremap <leader>e <cmd>Oil<cr>
