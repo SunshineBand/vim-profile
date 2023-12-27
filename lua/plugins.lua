@@ -44,6 +44,7 @@ return require('packer').startup(function()
       require('git-conflict').setup()
     end
   }
+  use 'Almo7aya/openingh.nvim'
 
   -- Lsp
 

@@ -81,6 +81,10 @@ vmap <leader>zg :'<,'>ZkMatch<cr>
 
 nmap <leader>gs :G<cr>
 nnoremap <leader>ga :A<cr>
+nnoremap <leader>gr :OpenInGHRepo <cr>
+nnoremap <leader>gf :OpenInGHFile <cr>
+vnoremap <leader>gf :OpenInGHFileLines <cr>
+
 nmap <leader>co :copen<cr>
 nmap <leader>cn :cnext<cr>
 nmap <leader>cp :cprev<cr>
