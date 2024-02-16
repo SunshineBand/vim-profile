@@ -45,6 +45,7 @@ return require('packer').startup(function()
     end
   }
   use 'Almo7aya/openingh.nvim'
+  use 'github/copilot.vim'
 
   -- Lsp
 
