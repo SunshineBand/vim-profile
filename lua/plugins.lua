@@ -10,7 +10,7 @@ return require('packer').startup(function()
     run = function() vim.fn['mkdp#util#install']() end,
   }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.x',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
