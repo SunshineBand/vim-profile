@@ -75,6 +75,8 @@ vim.keymap.set("n", "[c", function()
 require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
 
+vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
 EOF
 
 nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
