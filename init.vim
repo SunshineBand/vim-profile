@@ -7,7 +7,6 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=4
-set list
 set lcs+=space:·
 set number
 set relativenumber
