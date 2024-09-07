@@ -14,7 +14,7 @@ set relativenumber
 set inccommand=split
 
 if (has('termguicolors'))
-  set termguicolors
+    set termguicolors
 endif
 colorscheme tokyonight
 
@@ -72,7 +72,7 @@ nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 lua <<EOF
 
 vim.keymap.set("n", "[c", function()
-require("treesitter-context").go_to_context(vim.v.count1)
+    require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
 
 vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
