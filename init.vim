@@ -16,11 +16,11 @@ set inccommand=split
 if (has('termguicolors'))
     set termguicolors
 endif
-colorscheme tokyonight
 
 filetype plugin on
 filetype plugin indent on
-lua require('plugins')
+lua require('config.lazy')
+colorscheme tokyonight-storm
 lua vim.notify = require('notify')
 lua require('nvim-notify-config')
 lua require('nvim-scrollbar-config')
