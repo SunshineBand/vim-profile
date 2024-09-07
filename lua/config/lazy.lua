@@ -17,8 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     spec = {
-        { 'wbthomason/packer.nvim' },
-
         -- Tools
         { 'tyru/open-browser.vim' },
         { 'petertriho/nvim-scrollbar' },
