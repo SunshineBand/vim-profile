@@ -33,7 +33,6 @@ lua require('telescope-config')
 lua require('null-ls-config')
 lua require('zk-config')
 lua require('tokyonight-config')
-lua require('oil-nvim-config')
 lua require('git-conflict-config')
 let mapleader = ' '
 

@@ -54,6 +54,11 @@ require('lazy').setup({
         { 'rcarriga/nvim-notify' },
         {
             'stevearc/oil.nvim',
+            opts = {
+                keymaps = {
+                    ['<leader>e'] = 'actions.close',
+                },
+            }
             -- config = function() require('oil').init() end
         },
         {
