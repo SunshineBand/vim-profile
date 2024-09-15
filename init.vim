@@ -26,7 +26,6 @@ lua require('mason-lspconfig').setup()
 lua require('nvim-cmp-config')
 lua require('language-server')
 lua require('debugging')
-lua require('telescope-config')
 lua require('null-ls-config')
 let mapleader = ' '
 

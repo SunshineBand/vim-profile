@@ -27,8 +27,18 @@ require('lazy').setup({
             build = function() vim.fn['mkdp#util#install']() end,
         },
         {
-            'nvim-telescope/telescope.nvim', version = "0.1.8",
-            dependencies = {'nvim-lua/plenary.nvim'}
+            'nvim-telescope/telescope.nvim',
+            version = "0.1.8",
+            dependencies = {'nvim-lua/plenary.nvim'},
+            opts = {
+                defaults = {
+                    file_ignore_patterns = {
+                        'node_modules',
+                        '.git/'
+                    },
+                    layout_strategy = 'vertical',
+                },
+            }
         },
         {
             'ThePrimeagen/harpoon',
