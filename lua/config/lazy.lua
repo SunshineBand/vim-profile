@@ -68,9 +68,7 @@ require('lazy').setup({
         },
         {
             'akinsho/git-conflict.nvim', version = "*",
-            -- config = function()
-            --     require('git-conflict').init()
-            -- end
+            opts = {}
         },
         { 'Almo7aya/openingh.nvim' },
         { 'github/copilot.vim' },
