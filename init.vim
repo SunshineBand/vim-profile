@@ -20,8 +20,6 @@ filetype plugin on
 filetype plugin indent on
 lua require('config.lazy')
 colorscheme tokyonight-storm
-lua vim.notify = require('notify')
-lua require('nvim-notify-config')
 lua require('gitsigns-config')
 lua require('mason').setup()
 lua require('mason-lspconfig').setup()

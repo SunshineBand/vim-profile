@@ -51,7 +51,12 @@ require('lazy').setup({
         { 'tpope/vim-commentary' },
         { 'nvim-tree/nvim-web-devicons' },
         { 'mickael-menu/zk-nvim' },
-        { 'rcarriga/nvim-notify' },
+        {
+            'rcarriga/nvim-notify',
+            opts = {
+                timeout = 2000,
+            }
+        },
         {
             'stevearc/oil.nvim',
             opts = {
