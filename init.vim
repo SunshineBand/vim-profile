@@ -23,7 +23,6 @@ colorscheme tokyonight-storm
 lua vim.notify = require('notify')
 lua require('nvim-notify-config')
 lua require('gitsigns-config')
-lua require('lualine-config')
 lua require('mason').setup()
 lua require('mason-lspconfig').setup()
 lua require('nvim-cmp-config')

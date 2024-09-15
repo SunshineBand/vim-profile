@@ -100,7 +100,8 @@ require('lazy').setup({
         { 'ellisonleao/gruvbox.nvim' },
         {
             'nvim-lualine/lualine.nvim',
-            dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true }
+            dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
+            opts = {}
         },
         { 'folke/tokyonight.nvim' },
         { 'ap/vim-css-color' },
