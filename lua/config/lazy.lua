@@ -113,7 +113,12 @@ require('lazy').setup({
             dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
             opts = {}
         },
-        { 'folke/tokyonight.nvim' },
+        {
+            'folke/tokyonight.nvim',
+            opts = {
+                style = 'storm'
+            }
+        },
         { 'ap/vim-css-color' },
         {
             'kawre/leetcode.nvim',
