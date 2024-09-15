@@ -19,7 +19,7 @@ require('lazy').setup({
     spec = {
         -- Tools
         { 'tyru/open-browser.vim' },
-        { 'petertriho/nvim-scrollbar' },
+        { 'petertriho/nvim-scrollbar', opts = {} },
         {
             'iamcco/markdown-preview.nvim',
             cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
