@@ -50,7 +50,14 @@ require('lazy').setup({
         { 'tpope/vim-surround' },
         { 'tpope/vim-commentary' },
         { 'nvim-tree/nvim-web-devicons' },
-        { 'zk-org/zk-nvim' },
+        {
+            'zk-org/zk-nvim',
+            config = function()
+                require('zk').setup({
+                    picker = 'telescope',
+                })
+            end
+        },
         {
             'rcarriga/nvim-notify',
             opts = {

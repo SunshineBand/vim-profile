@@ -29,7 +29,6 @@ lua require('debugging')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('null-ls-config')
-lua require('zk-config')
 let mapleader = ' '
 
 map gx <Plug>(openbrowser-smart-search)
