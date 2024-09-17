@@ -208,7 +208,7 @@ require('lazy').setup({
             },
             opts = {
                 arg = "leetcode.nvim",
-                lang = "typescript"
+                lang = "python3"
             },
         },
     },
