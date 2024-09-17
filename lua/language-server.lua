@@ -31,5 +31,12 @@ local servers = { 'solargraph', 'ts_ls', 'tailwindcss', 'rust_analyzer', 'terraf
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         on_attach = on_attach,
+        settings = {
+            Lua = {
+                diagnostics = {
+                    globals = { 'vim' }
+                }
+            }
+        }
     }
 end
