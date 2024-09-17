@@ -63,7 +63,7 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 -- TODO: can capabilities be injected in language-server.lua?
-local servers = { 'solargraph', 'ts_ls', 'tailwindcss' }
+local servers = { 'solargraph', 'ts_ls', 'tailwindcss', 'lua_ls' }
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         capabilities = capabilities
