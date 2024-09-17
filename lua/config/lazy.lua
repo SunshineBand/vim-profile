@@ -92,7 +92,6 @@ require('lazy').setup({
         { 'jiangmiao/auto-pairs' },
         { 'tpope/vim-repeat' },
         { 'tpope/vim-surround' },
-        { 'tpope/vim-commentary' },
         { 'nvim-tree/nvim-web-devicons' },
         {
             'zk-org/zk-nvim',
