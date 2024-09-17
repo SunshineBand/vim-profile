@@ -21,12 +21,6 @@ require('lazy').setup({
         { 'tyru/open-browser.vim' },
         { 'petertriho/nvim-scrollbar', opts = {} },
         {
-            'iamcco/markdown-preview.nvim',
-            cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-            ft = { 'markdown' },
-            build = function() vim.fn['mkdp#util#install']() end,
-        },
-        {
             'nvim-telescope/telescope.nvim',
             version = "0.1.8",
             dependencies = {'nvim-lua/plenary.nvim'},
@@ -94,7 +88,6 @@ require('lazy').setup({
                 end
             }
         },
-        { 'tpope/vim-dispatch' },
         { 'tpope/vim-projectionist' },
         { 'jiangmiao/auto-pairs' },
         { 'tpope/vim-repeat' },
@@ -180,7 +173,6 @@ require('lazy').setup({
         -- Language Specific
 
         { 'tpope/vim-rails' },
-        { 'xuhdev/vim-latex-live-preview' },
         { 'tpope/vim-endwise' },
 
         -- Color Schemes and Visuals
