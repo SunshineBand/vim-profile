@@ -94,7 +94,6 @@ require('lazy').setup({
                 end
             }
         },
-        { 'mfussenegger/nvim-dap' },
         { 'tpope/vim-dispatch' },
         { 'tpope/vim-projectionist' },
         { 'jiangmiao/auto-pairs' },
