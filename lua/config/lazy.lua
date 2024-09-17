@@ -17,9 +17,76 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
     spec = {
-        -- Tools
         { 'tyru/open-browser.vim' },
-        { 'petertriho/nvim-scrollbar', opts = {} },
+        { 'petertriho/nvim-scrollbar',              opts = {} },
+        { 'tpope/vim-fugitive' },
+        { 'tpope/vim-projectionist' },
+        { 'jiangmiao/auto-pairs' },
+        { 'tpope/vim-repeat' },
+        { 'tpope/vim-surround' },
+        { 'nvim-tree/nvim-web-devicons' },
+        { 'akinsho/git-conflict.nvim',              version = '*',      opts = {} },
+        { 'Almo7aya/openingh.nvim' },
+        { 'github/copilot.vim' },
+        { 'williamboman/mason.nvim',                opts = {} },
+        { 'williamboman/mason-lspconfig.nvim',      opts = {} },
+        { 'neovim/nvim-lspconfig' },
+        { 'hrsh7th/cmp-nvim-lsp' },
+        { 'hrsh7th/cmp-buffer' },
+        { 'hrsh7th/cmp-path' },
+        { 'hrsh7th/cmp-cmdline' },
+        { 'hrsh7th/nvim-cmp' },
+        { 'nvim-treesitter/nvim-treesitter-context' },
+        { 'tpope/vim-rails' },
+        { 'tpope/vim-endwise' },
+        { 'adelarsq/vim-devicons-emoji' },
+        { 'nvim-telescope/telescope-symbols.nvim' },
+        { 'catppuccin/nvim',                        name = 'catppuccin' },
+        { 'nerdypepper/agila.vim' },
+        { 'ellisonleao/gruvbox.nvim' },
+        { 'ap/vim-css-color' },
+        {
+            'ThePrimeagen/harpoon',
+            dependencies = { 'nvim-lua/plenary.nvim' }
+        },
+        {
+            'nvim-lualine/lualine.nvim',
+            dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
+            opts = {}
+        },
+        {
+            'folke/tokyonight.nvim',
+            opts = {
+                style = 'storm'
+            }
+        },
+        {
+            'rcarriga/nvim-notify',
+            opts = {
+                timeout = 2000,
+            }
+        },
+        {
+            'stevearc/oil.nvim',
+            opts = {
+                keymaps = {
+                    ['<leader>e'] = 'actions.close',
+                },
+            }
+        },
+        {
+            'kawre/leetcode.nvim',
+            build = ':TSUpdateSync',
+            dependencies = {
+                'nvim-telescope/telescope.nvim',
+                'nvim-lua/plenary.nvim', -- required by telescope
+                'MunifTanjim/nui.nvim',
+            },
+            opts = {
+                arg = 'leetcode.nvim',
+                lang = 'python3'
+            },
+        },
         {
             'nvim-telescope/telescope.nvim',
             version = '0.1.8',
@@ -35,10 +102,13 @@ require('lazy').setup({
             }
         },
         {
-            'ThePrimeagen/harpoon',
-            dependencies = { 'nvim-lua/plenary.nvim' }
+            'zk-org/zk-nvim',
+            config = function()
+                require('zk').setup({
+                    picker = 'telescope',
+                })
+            end
         },
-        { 'tpope/vim-fugitive' },
         {
             'lewis6991/gitsigns.nvim',
             opts = {
@@ -88,51 +158,6 @@ require('lazy').setup({
                 end
             }
         },
-        { 'tpope/vim-projectionist' },
-        { 'jiangmiao/auto-pairs' },
-        { 'tpope/vim-repeat' },
-        { 'tpope/vim-surround' },
-        { 'nvim-tree/nvim-web-devicons' },
-        {
-            'zk-org/zk-nvim',
-            config = function()
-                require('zk').setup({
-                    picker = 'telescope',
-                })
-            end
-        },
-        {
-            'rcarriga/nvim-notify',
-            opts = {
-                timeout = 2000,
-            }
-        },
-        {
-            'stevearc/oil.nvim',
-            opts = {
-                keymaps = {
-                    ['<leader>e'] = 'actions.close',
-                },
-            }
-            -- config = function() require('oil').init() end
-        },
-        { 'akinsho/git-conflict.nvim',         version = '*', opts = {} },
-        { 'Almo7aya/openingh.nvim' },
-        { 'github/copilot.vim' },
-
-        -- Lsp
-
-        { 'williamboman/mason.nvim',           opts = {} },
-        { 'williamboman/mason-lspconfig.nvim', opts = {} },
-        { 'neovim/nvim-lspconfig' },
-        { 'hrsh7th/cmp-nvim-lsp' },
-        { 'hrsh7th/cmp-buffer' },
-        { 'hrsh7th/cmp-path' },
-        { 'hrsh7th/cmp-cmdline' },
-        { 'hrsh7th/nvim-cmp' },
-
-        -- Syntax
-
         {
             'nvim-treesitter/nvim-treesitter',
             config = function()
@@ -157,45 +182,6 @@ require('lazy').setup({
                     },
                 }
             end
-        },
-        { 'nvim-treesitter/nvim-treesitter-context' },
-
-        -- Language Specific
-
-        { 'tpope/vim-rails' },
-        { 'tpope/vim-endwise' },
-
-        -- Color Schemes and Visuals
-
-        { 'adelarsq/vim-devicons-emoji' },
-        { 'nvim-telescope/telescope-symbols.nvim' },
-        { 'catppuccin/nvim',                        name = 'catppuccin' },
-        { 'nerdypepper/agila.vim' },
-        { 'ellisonleao/gruvbox.nvim' },
-        {
-            'nvim-lualine/lualine.nvim',
-            dependencies = { 'nvim-tree/nvim-web-devicons', lazy = true },
-            opts = {}
-        },
-        {
-            'folke/tokyonight.nvim',
-            opts = {
-                style = 'storm'
-            }
-        },
-        { 'ap/vim-css-color' },
-        {
-            'kawre/leetcode.nvim',
-            build = ':TSUpdateSync',
-            dependencies = {
-                'nvim-telescope/telescope.nvim',
-                'nvim-lua/plenary.nvim', -- required by telescope
-                'MunifTanjim/nui.nvim',
-            },
-            opts = {
-                arg = 'leetcode.nvim',
-                lang = 'python3'
-            },
         },
     },
     install = { colorscheme = { 'tokyonight-storm' } },
