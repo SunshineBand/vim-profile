@@ -133,8 +133,14 @@ require('lazy').setup({
 
         -- Lsp
 
-        { 'williamboman/mason.nvim' },
-        { 'williamboman/mason-lspconfig.nvim' },
+        {
+            'williamboman/mason.nvim',
+            opts = {}
+        },
+        {
+            'williamboman/mason-lspconfig.nvim',
+            opts = {}
+        },
         { 'neovim/nvim-lspconfig' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'hrsh7th/cmp-buffer' },

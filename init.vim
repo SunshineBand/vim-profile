@@ -20,8 +20,6 @@ filetype plugin on
 filetype plugin indent on
 lua require('config.lazy')
 colorscheme tokyonight-storm
-lua require('mason').setup()
-lua require('mason-lspconfig').setup()
 lua require('nvim-cmp-config')
 lua require('language-server')
 let mapleader = ' '
