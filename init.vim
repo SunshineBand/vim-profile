@@ -25,7 +25,6 @@ lua require('mason-lspconfig').setup()
 lua require('nvim-cmp-config')
 lua require('language-server')
 lua require('debugging')
-lua require('null-ls-config')
 let mapleader = ' '
 
 map gx <Plug>(openbrowser-smart-search)
