@@ -18,6 +18,7 @@ endif
 
 filetype plugin on
 filetype plugin indent on
+
 lua require('config.lazy')
 colorscheme tokyonight-storm
 lua require('nvim-cmp-config')
@@ -53,15 +54,10 @@ nnoremap <leader>md <cmd>lua require('harpoon.ui').nav_file(4)<cr>
 
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
-lua <<EOF
+vmap <C-j> :m '>+1<CR>gv=gv
+vmap <C-k> :m '<-2<CR>gv=gv
 
-vim.keymap.set("n", "[c", function()
-    require("treesitter-context").go_to_context(vim.v.count1)
-end, { silent = true })
-
-vim.keymap.set("v", "<C-j>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv")
-EOF
+nnoremap <silent> [c <cmd>lua require('treesitter-context').go_to_context(vim.v.count1)<cr>
 
 nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
 nmap <leader>zn <cmd>ZkNew { title = vim.fn.input('Title: ') }<cr>
