@@ -56,6 +56,8 @@ nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
 vmap <C-j> :m '>+1<CR>gv=gv
 vmap <C-k> :m '<-2<CR>gv=gv
+nmap <C-j> V:m '>+1<CR>gv=gv<esc>
+nmap <C-k> V:m '<-2<CR>gv=gv<esc>
 
 nnoremap <silent> [c <cmd>lua require('treesitter-context').go_to_context(vim.v.count1)<cr>
 
