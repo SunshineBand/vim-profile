@@ -84,7 +84,13 @@ require('lazy').setup({
             },
             opts = {
                 arg = 'leetcode.nvim',
-                lang = 'python3'
+                lang = 'cpp',
+                injector = {
+                    ['cpp'] = {
+                        before = { '#include <bits/stdc++.h>', 'using namespace std;' },
+                        after = 'int main() {}',
+                    }
+                }
             },
         },
         {
