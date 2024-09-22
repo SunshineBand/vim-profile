@@ -261,6 +261,7 @@ require('lazy').setup({
                             goto_previous_start = {
                                 ['[m'] = '@function.outer',
                                 ['[['] = '@class.outer',
+                                ['[o'] = '@loop.*',
                             },
                             goto_previous_end = {
                                 ['[M'] = '@function.outer',
