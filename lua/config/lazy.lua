@@ -24,6 +24,7 @@ require('lazy').setup({
         { 'jiangmiao/auto-pairs' },
         { 'tpope/vim-repeat' },
         { 'tpope/vim-surround' },
+        { 'tpope/vim-commentary' },
         { 'nvim-tree/nvim-web-devicons' },
         { 'akinsho/git-conflict.nvim',              version = '*',      opts = {} },
         { 'Almo7aya/openingh.nvim' },
