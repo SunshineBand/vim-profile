@@ -3,6 +3,8 @@ lua require('config.lazy')
 
 colorscheme tokyonight-storm
 
+tnoremap <leader><Esc> <C-\><C-n>
+
 map gx <Plug>(openbrowser-smart-search)
 map Y y$
 noremap <leader>y "+y
@@ -12,7 +14,6 @@ nnoremap <leader>yf :let @+ = expand("%:.")<cr>
 nnoremap <leader>vc :e ~/.config/nvim/init.vim<cr>
 nnoremap <leader>sl :set list!<cr>
 nnoremap <leader>rl :set relativenumber!<cr>
-tnoremap <leader><Esc> <C-\><C-n>
 
 nnoremap <leader>e <cmd>Oil<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
