@@ -1,26 +1,8 @@
 autocmd StdinReadPre * let s:std_in=1
 
-lua vim.g.loaded_netrw = 1
-lua vim.g.loaded_netrwPlugin = 1
-
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=4
-set lcs+=space:·
-set number
-set relativenumber
-set inccommand=split
-
-if (has('termguicolors'))
-    set termguicolors
-endif
-
-filetype plugin on
-filetype plugin indent on
-
-let mapleader = ' '
+lua require('config.options')
 lua require('config.lazy')
+
 colorscheme tokyonight-storm
 
 map gx <Plug>(openbrowser-smart-search)
