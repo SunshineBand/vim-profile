@@ -18,7 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     spec = {
         { 'tyru/open-browser.vim' },
-        { 'petertriho/nvim-scrollbar',              opts = {} },
         { 'tpope/vim-fugitive' },
         { 'tpope/vim-projectionist' },
         { 'jiangmiao/auto-pairs' },
@@ -28,7 +27,6 @@ require('lazy').setup({
         { 'nvim-tree/nvim-web-devicons' },
         { 'akinsho/git-conflict.nvim',              version = '*',      opts = {} },
         { 'Almo7aya/openingh.nvim' },
-        { 'github/copilot.vim' },
         { 'williamboman/mason.nvim',                opts = {} },
         { 'williamboman/mason-lspconfig.nvim',      opts = {} },
         { 'neovim/nvim-lspconfig' },
