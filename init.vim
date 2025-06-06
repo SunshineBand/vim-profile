@@ -1,5 +1,3 @@
-autocmd StdinReadPre * let s:std_in=1
-
 lua require('config.options')
 lua require('config.lazy')
 
