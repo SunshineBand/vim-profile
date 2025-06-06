@@ -19,9 +19,9 @@ endif
 filetype plugin on
 filetype plugin indent on
 
+let mapleader = ' '
 lua require('config.lazy')
 colorscheme tokyonight-storm
-let mapleader = ' '
 
 map gx <Plug>(openbrowser-smart-search)
 map Y y$
