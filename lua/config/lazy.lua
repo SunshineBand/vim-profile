@@ -24,7 +24,6 @@ require('lazy').setup({
         { 'tpope/vim-repeat' },
         { 'tpope/vim-surround' },
         { 'tpope/vim-commentary' },
-        { 'nvim-tree/nvim-web-devicons' },
         { 'akinsho/git-conflict.nvim',              version = '*',      opts = {} },
         { 'Almo7aya/openingh.nvim' },
         { 'nvim-treesitter/nvim-treesitter-context' },
@@ -32,10 +31,6 @@ require('lazy').setup({
         { 'tpope/vim-endwise' },
         { 'adelarsq/vim-devicons-emoji' },
         { 'nvim-telescope/telescope-symbols.nvim' },
-        { 'catppuccin/nvim',                        name = 'catppuccin' },
-        { 'nerdypepper/agila.vim' },
-        { 'ellisonleao/gruvbox.nvim' },
-        { 'ap/vim-css-color' },
         {
             'ThePrimeagen/harpoon',
             dependencies = { 'nvim-lua/plenary.nvim' }
