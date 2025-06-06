@@ -21,8 +21,6 @@ filetype plugin indent on
 
 lua require('config.lazy')
 colorscheme tokyonight-storm
-lua require('nvim-cmp-config')
-lua require('language-server')
 let mapleader = ' '
 
 map gx <Plug>(openbrowser-smart-search)
