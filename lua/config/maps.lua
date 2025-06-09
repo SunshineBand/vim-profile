@@ -17,3 +17,7 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('t', '<leader><Esc>', '<C-\\><C-n>')
 vim.keymap.set('v', '<C-j>', ":m '>+1<cr>gv=gv")
 vim.keymap.set('v', '<C-k>', ":m '<-2<cr>gv=gv")
+
+vim.keymap.set('n', '<leader>gs', function()
+    require('neogit').open({ kind = 'split_above' })
+end)

@@ -34,7 +34,6 @@ nmap <leader>zi <cmd>ZkInsertLink<cr>
 nmap <leader>zb <cmd>ZkBacklinks<cr>
 vmap <leader>zw :'<,'>ZkMatch<cr>
 
-nmap <leader>gs :G<cr>
 nnoremap <leader>ga :A<cr>
 nnoremap <leader>gr :OpenInGHRepo <cr>
 nnoremap <leader>gf :OpenInGHFile <cr>
