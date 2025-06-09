@@ -8,7 +8,6 @@ return {
     { 'Almo7aya/openingh.nvim' },
     { 'tpope/vim-rails' },
     { 'tpope/vim-endwise' },
-    { 'adelarsq/vim-devicons-emoji' },
     { 'nvim-telescope/telescope-symbols.nvim' },
     {
         'ThePrimeagen/harpoon',
@@ -34,6 +33,7 @@ return {
     },
     {
         'stevearc/oil.nvim',
+        dependencies = { 'adelarsq/vim-devicons-emoji' },
         opts = {
             keymaps = {
                 ['<leader>e'] = 'actions.close',
