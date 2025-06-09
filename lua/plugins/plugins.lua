@@ -1,5 +1,4 @@
 return {
-    { 'tyru/open-browser.vim' },
     { 'tpope/vim-fugitive' },
     { 'tpope/vim-projectionist' },
     { 'jiangmiao/auto-pairs' },

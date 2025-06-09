@@ -4,8 +4,6 @@ lua require('config.maps')
 
 colorscheme tokyonight-storm
 
-map gx <Plug>(openbrowser-smart-search)
-
 nnoremap <leader>e <cmd>Oil<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
