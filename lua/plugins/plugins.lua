@@ -8,7 +8,6 @@ return {
     { 'tpope/vim-commentary' },
     { 'akinsho/git-conflict.nvim',              version = '*',      opts = {} },
     { 'Almo7aya/openingh.nvim' },
-    { 'nvim-treesitter/nvim-treesitter-context' },
     { 'tpope/vim-rails' },
     { 'tpope/vim-endwise' },
     { 'adelarsq/vim-devicons-emoji' },

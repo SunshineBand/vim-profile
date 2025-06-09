@@ -24,8 +24,6 @@ nnoremap <leader>md <cmd>lua require('harpoon.ui').nav_file(4)<cr>
 
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
-nnoremap <silent> [c <cmd>lua require('treesitter-context').go_to_context(vim.v.count1)<cr>
-
 nmap <leader>i <cmd>lua require'telescope.builtin'.symbols{ sources = {'emoji', 'kaomoji', 'gitmoji'} }<cr>
 nmap <leader>zn <cmd>ZkNew { title = vim.fn.input('Title: ') }<cr>
 nmap <leader>zf <cmd>ZkNotes { sort = { 'modified' }, tags = { '-person' } }<cr>
