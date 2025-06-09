@@ -32,11 +32,7 @@ nmap <leader>zf <cmd>ZkNotes { sort = { 'modified' }, tags = { '-person' } }<cr>
 nmap <leader>zt <cmd>ZkTags<cr>
 nmap <leader>zi <cmd>ZkInsertLink<cr>
 nmap <leader>zb <cmd>ZkBacklinks<cr>
-nmap <leader>zg <cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<cr>
-nmap <leader>zd <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'daily' }})<cr>
-nmap <leader>zj <cmd>ZkNew { dir = 'weekly' }<cr>
-nmap <leader>zw <cmd>lua require('zk.commands').get('ZkNotes')({ hrefs = { 'weekly' }})<cr>
-vmap <leader>zg :'<,'>ZkMatch<cr>
+vmap <leader>zw :'<,'>ZkMatch<cr>
 
 nmap <leader>gs :G<cr>
 nnoremap <leader>ga :A<cr>
