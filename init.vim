@@ -1,19 +1,10 @@
 lua require('config.options')
 lua require('config.lazy')
+lua require('config.maps')
 
 colorscheme tokyonight-storm
 
-tnoremap <leader><Esc> <C-\><C-n>
-
 map gx <Plug>(openbrowser-smart-search)
-map Y y$
-noremap <leader>y "+y
-noremap <leader>Y "+y$
-noremap <leader>p "+p
-nnoremap <leader>yf :let @+ = expand("%:.")<cr>
-nnoremap <leader>vc :e ~/.config/nvim/init.vim<cr>
-nnoremap <leader>sl :set list!<cr>
-nnoremap <leader>rl :set relativenumber!<cr>
 
 nnoremap <leader>e <cmd>Oil<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
@@ -32,11 +23,6 @@ nnoremap <leader>mc <cmd>lua require('harpoon.ui').nav_file(3)<cr>
 nnoremap <leader>md <cmd>lua require('harpoon.ui').nav_file(4)<cr>
 
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
-
-vmap <C-j> :m '>+1<CR>gv=gv
-vmap <C-k> :m '<-2<CR>gv=gv
-nmap <C-j> :m +1<cr>==
-nmap <C-k> :m -2<cr>==
 
 nnoremap <silent> [c <cmd>lua require('treesitter-context').go_to_context(vim.v.count1)<cr>
 
@@ -57,7 +43,3 @@ nnoremap <leader>ga :A<cr>
 nnoremap <leader>gr :OpenInGHRepo <cr>
 nnoremap <leader>gf :OpenInGHFile <cr>
 vnoremap <leader>gf :OpenInGHFileLines <cr>
-
-nmap <leader>co :copen<cr>
-nmap <leader>cn :cnext<cr>
-nmap <leader>cp :cprev<cr>
