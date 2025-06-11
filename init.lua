@@ -1,5 +1,5 @@
-lua require('config.options')
-lua require('config.lazy')
-lua require('config.maps')
+require('config.options')
+require('config.lazy')
+require('config.maps')
 
-lua vim.cmd.colorscheme('tokyonight-storm')
+vim.cmd.colorscheme('tokyonight-storm')
