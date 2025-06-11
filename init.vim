@@ -4,7 +4,6 @@ lua require('config.maps')
 
 colorscheme tokyonight-storm
 
-nnoremap <leader>e <cmd>Oil<cr>
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ hidden = true })<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>rr <cmd>lua require('telescope.builtin').resume()<cr>
@@ -12,13 +11,6 @@ nnoremap <leader>hg <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>rw <cmd>lua require('telescope.builtin').grep_string()<cr>
 nnoremap <leader>rq <cmd>lua require('telescope.builtin').quickfix()<cr>
 nnoremap <leader>t <cmd>lua require('telescope.builtin').builtin()<cr>
-
-nnoremap <leader>mm <cmd>lua require('harpoon.mark').add_file()<cr>
-nnoremap <leader>mo <cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>
-nnoremap <leader>ma <cmd>lua require('harpoon.ui').nav_file(1)<cr>
-nnoremap <leader>mb <cmd>lua require('harpoon.ui').nav_file(2)<cr>
-nnoremap <leader>mc <cmd>lua require('harpoon.ui').nav_file(3)<cr>
-nnoremap <leader>md <cmd>lua require('harpoon.ui').nav_file(4)<cr>
 
 nnoremap <leader>li <cmd>lua vim.lsp.buf.format()<cr>
 
