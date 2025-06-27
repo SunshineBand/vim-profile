@@ -1,3 +1,5 @@
+vim.lsp.enable('luals')
+
 vim.g.loaded_netrw = true
 vim.g.loaded_netrwPlugin = true
 vim.g.mapleader = ' '
