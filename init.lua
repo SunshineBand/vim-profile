@@ -1,8 +1,11 @@
 require('lsp.lua')
+require('lsp.ruby')
+require('lsp.rubocop')
 require('config.options')
 require('config.lazy')
 require('config.maps')
 
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.notify = require('notify')
 -- vim.cmd.colorscheme('tokyonight-storm')
 vim.cmd.colorscheme('github_dark_default')

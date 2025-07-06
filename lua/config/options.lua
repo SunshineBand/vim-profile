@@ -1,3 +1,5 @@
+vim.lsp.enable('ruby-lsp')
+vim.lsp.enable('rubocop')
 vim.lsp.enable('luals')
 
 vim.g.loaded_netrw = true
